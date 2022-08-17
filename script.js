@@ -27,38 +27,38 @@ else computer wins
 
 */
 
-function game(){
+function playRound(){
 
 let playerWins = false;
 
 if(playerSelection === "rock" && computerSelection === "scissors"){
-    alert(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`)
     playerWins = true;
+    return(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`);
 }
 
 if(playerSelection === "paper" && computerSelection === "rock"){
-    alert(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`)
     playerWins = true;
+    return(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`)    
 }
 
 if(playerSelection === "scissors" && computerSelection === "paper"){
-    alert(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`)
     playerWins = true;
+    return(`YOU WIN!!! ${playerSelection} beats ${computerSelection}`)
 }
 
 //player doesn't win here, but playerWins needs to be not false for the next if
 if(playerSelection === computerSelection){
-    alert(`DRAW!!! both choose ${computerSelection}`)
     playerWins = true;
+    return(`DRAW!!! both choose ${computerSelection}`)
 }
 
 if(playerWins === false){
-    alert(`YOU Loose!!! ${computerSelection} beats ${playerSelection}`)
+    return(`YOU Loose!!! ${computerSelection} beats ${playerSelection}`)
 }
 
 }
 
-game();
+console.log(playRound());
 
 
 
